@@ -12,7 +12,16 @@ function App() {
   const addValue = () => {
     if (counter < 20) {
       // counter=counter+1;
-      setCounter(counter + 1);
+      //if weat to add 1 fourt times dont do 
+      // setCounter(counter + 1);
+      // setCounter(counter + 1);
+      // setCounter(counter + 1);
+      // setCounter(counter + 1);// if done this it will only add 1 not 4 because it uses bundle and sees that all re same work so do onlu one time
+      // instead do 
+      setCounter(prevCounter=>prevCounter+1);
+      setCounter(prevCounter=>prevCounter+1);
+      setCounter(prevCounter=>prevCounter+1);
+      setCounter(prevCounter=>prevCounter+1);
       console.log("Clicked", counter);
     }
   }
